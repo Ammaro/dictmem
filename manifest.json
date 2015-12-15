@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Dictionary checker",
+  "description": "This extension help you remember words that you check the dictionary for",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "dict.png",
+    "default_popup": "dict_popup.html",
+    "default title": "dictmem"
+  },
+  "permissions": [
+    "activeTab",
+    "http://www.dictionaryapi.com/",
+    "https://ajax.googleapis.com/"
+  ],
+   "content_scripts": [ {
+    "js": [ "jquery.min.js"],
+    "matches": [ "http://*/*", "https://*/*"]
+  }]
+}
