@@ -10,6 +10,8 @@
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        min-width: 300px;
+        min-height: 200px;
         font-size: 100%;
       }
       #status {
@@ -19,14 +21,31 @@
         overflow: hidden;
         max-width: 400px;
       }
+      #string-text {
+        display: inline;
+        float: left;
+        text-align: center;
+        width: 60%;
+        padding: 5px;
+        border: solid 1px #dcdcdc;
+      }
+      #click-me {
+        margin-left: 10px;
+        background: #48e;
+        border: solid 3px #48e;
+        border-radius: 3px;
+        width: 30%;
+        color: white;
+      }
     </style>
 
 
   </head>
   <body>
 
-    <input type="text" id="string-text"/>
-    <button id="click-me">click me </button>
+    <input placeholder="word to translate" type="text" id="string-text"/>
+    <button id="click-me">translate</button>
+
     <div id="status"></div>
     <div id="xml-result" hidden> </div>
 
